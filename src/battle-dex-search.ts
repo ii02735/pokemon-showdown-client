@@ -32,10 +32,6 @@ declare const BattleTeambuilderTable: any;
 export class DexSearch {
 	query = '';
 
-	/**
-	 * Dex for the mod/generation to search.
-	 */
-
 	typedSearch: BattleTypedSearch<SearchType> | null = null;
 
 	results: SearchRow[] | null = null;
@@ -79,6 +75,9 @@ export class DexSearch {
 	 */
 	filters: SearchFilter[] | null = null;
 
+	/**
+	 * Dex for the mod/generation to search.
+	 */
 	constructor(private readonly dex: ModdedDex, searchType: SearchType | '' = '', formatid = '' as ID, species = '' as ID) {
 		this.setType(searchType, formatid, species);
 	}
