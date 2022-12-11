@@ -35,7 +35,6 @@ export class DexSearch {
 	/**
 	 * Dex for the mod/generation to search.
 	 */
-	dex: ModdedDex = Dex;
 
 	typedSearch: BattleTypedSearch<SearchType> | null = null;
 
@@ -80,7 +79,7 @@ export class DexSearch {
 	 */
 	filters: SearchFilter[] | null = null;
 
-	constructor(searchType: SearchType | '' = '', formatid = '' as ID, species = '' as ID) {
+	constructor(private readonly dex: ModdedDex, searchType: SearchType | '' = '', formatid = '' as ID, species = '' as ID) {
 		this.setType(searchType, formatid, species);
 	}
 
