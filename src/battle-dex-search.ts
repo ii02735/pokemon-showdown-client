@@ -29,7 +29,7 @@ declare const BattleTeambuilderTable: any;
 /**
  * Backend for search UIs.
  */
-class DexSearch {
+export class DexSearch {
 	query = '';
 
 	/**
